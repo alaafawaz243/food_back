@@ -65,7 +65,7 @@ export class ProductService {
   }
 
   async getAllProducts(getAllProductDto: GetAllProductDto, userId?: string) {
-    const { categoryId, search, page = 1, limit = 2 } = getAllProductDto;
+    const { categoryId, search, page = 1, limit = 5 } = getAllProductDto;
 
     const skip = (page - 1) * limit;
     const where: Prisma.ProductWhereInput = {
