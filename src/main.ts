@@ -23,7 +23,7 @@ async function bootstrap() {
   app.use(cookieParser());
   app.use(morgan('dev'));
   app.use(json());
-  const allowedOrigins = [process.env.CLIENT_URL1, process.env.CLIENT_URL2];
+  const allowedOrigins = [process.env.CLIENT_URL];
   app.use(json());
   app.enableCors({
     origin: (origin, callback) => {
